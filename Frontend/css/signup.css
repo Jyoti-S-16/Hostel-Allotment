@@ -1,0 +1,13 @@
+.signup_gif{
+    
+    width: 600px;
+    height: 600px;
+}
+
+@media (max-width:990px)
+{
+    .signup_gif{
+        width: 400px;
+        height: 400px;
+    }
+}
