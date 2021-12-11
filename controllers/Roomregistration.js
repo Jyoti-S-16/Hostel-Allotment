@@ -1,6 +1,27 @@
 const Student = require("../models/Studentdetails");
 const Room = require("../models/Roomsm");
 const { ObjectId } = require("mongoose");
+const bcrypt = require("bcryptjs");
+exports.Studentlogin = async (req, res) => {
+  const { email, password } = req.body;
+  const hash = bcrypt.hashSync(password, 10);
+  const Find = await Student.findOne({ email });
+  if (Find == undefined || Find == null) {
+    res.status.json({
+      message: "You are not present in our data base",
+    });
+  } else {
+    if (Find.password == hash) {
+      res.status(201).json({
+        message: true,
+      });
+    } else {
+      res.status(201).json({
+        message: "Incorrect password",
+      });
+    }
+  }
+};
 
 exports.RoomRegistration = async (req, res) => {
   const { name, rollNo, Array1 } = req.body;
@@ -34,7 +55,6 @@ exports.RoomRegistration = async (req, res) => {
           };
           array1.push(obb);
           await Room1.save();
-          
         } else {
           //problem will occur here cannot set headers after they are sent to client
           res.status(201).json({
@@ -57,14 +77,17 @@ exports.RoomRegistration = async (req, res) => {
 };
 
 exports.studentAdd = async (req, res) => {
-  const { name, rollNo, CGPI, Branch, Year, gender } = req.body;
+  const { name, rollNo, CGPI, Branch, Year, gender, email, password } =
+    req.body;
   let find = await Student.findOne({ rollNo });
 
   if (find !== null) {
     res.status(201).json({ message: "Student already there", find });
   } else {
+    password = bcrypt.hashSync(myPlaintextPassword, 10);
     const obje = {
       name,
+      email,
       rollNo,
       CGPI,
       Branch,
@@ -75,6 +98,7 @@ exports.studentAdd = async (req, res) => {
     await Student.create(obje);
     res.status(201).json({
       message: "Succesfull!",
+      obje,
     });
   }
 };

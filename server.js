@@ -7,7 +7,7 @@ const students = require("./routers/api/student");
 const room = require("./routers/api/room");
 const staff = require("./routers/api/staff");
 const path = require("path");
-const roomregistration = require('./routers/api/roomregistration');
+const roomregistration = require("./routers/api/roomregistration");
 
 const app = express();
 
@@ -20,9 +20,13 @@ const db = require("./config/keys").mongoURI;
 
 // connect to mongoDB
 mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true  })
+  .connect(db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 // Passport middleware
 app.use(passport.initialize());
@@ -35,7 +39,7 @@ app.use("/api/users", users);
 app.use("/api/student", students);
 app.use("/api/room", room);
 app.use("/api/staff", staff);
-app.use("/roomregistration",roomregistration);
+app.use("/api/RoomRegistration", roomregistration);
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
   //Set static folder

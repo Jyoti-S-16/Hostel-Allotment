@@ -11,6 +11,14 @@ const StudentSchema = new Schema(
       type: String,
       required: true,
     },
+    email: {
+      type: String,
+      //  required: true,
+    },
+    password: {
+      type: String,
+      //  required: true,
+    },
     CGPI: {
       type: Number,
       required: true,
@@ -27,13 +35,13 @@ const StudentSchema = new Schema(
       default: false,
     },
     RoomPreference: [Schema.Types.ObjectId],
-    RoomName:{
-		type:String
-	},
-	RoomID:{
-		type:Schema.Types.ObjectId,
-		ref:'roomsm'
-	},
+    RoomName: {
+      type: String,
+    },
+    RoomID: {
+      type: Schema.Types.ObjectId,
+      ref: "roomsm",
+    },
     whoBooked: {
       type: String,
     },

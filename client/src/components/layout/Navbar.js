@@ -21,7 +21,11 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link onClick={this.onLougoutClick.bind(this)} className="nav-link" to="/">
+          <Link
+            onClick={this.onLougoutClick.bind(this)}
+            className="nav-link"
+            to="/"
+          >
             <img
               className="rounded-circle"
               src={user.avatar}
@@ -39,14 +43,18 @@ class Navbar extends Component {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link className="nav-link" to="/register">
-            Sign Up
+            Admin Sign Up
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/login">
-            Login
+            Admin Login
           </Link>
+         
         </li>
+		<li> <Link className="nav-link" to="/studentLogin">
+            StudentLogin
+          </Link></li>
       </ul>
     );
 
@@ -76,14 +84,11 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
+const mapStateToProps = (state) => ({
+  auth: state.auth,
 });
 
-export default connect(
-  mapStateToProps,
-  { logoutUser }
-)(Navbar);
+export default connect(mapStateToProps, { logoutUser })(Navbar);
