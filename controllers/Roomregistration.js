@@ -4,16 +4,17 @@ const { ObjectId } = require("mongoose");
 const bcrypt = require("bcryptjs");
 exports.Studentlogin = async (req, res) => {
   const { email, password } = req.body;
-  const hash = bcrypt.hashSync(password, 10);
   const Find = await Student.findOne({ email });
   if (Find == undefined || Find == null) {
     res.status.json({
       message: "You are not present in our data base",
     });
   } else {
-    if (Find.password == hash) {
+    const hash = await bcrypt.compare(password, Find.password);
+    if (hash) {
       res.status(201).json({
         message: true,
+        Find,
       });
     } else {
       res.status(201).json({
@@ -79,12 +80,12 @@ exports.RoomRegistration = async (req, res) => {
 exports.studentAdd = async (req, res) => {
   const { name, rollNo, CGPI, Branch, Year, gender, email, password } =
     req.body;
-  let find = await Student.findOne({ rollNo });
+  let find = await Student.findOne({ email });
 
   if (find !== null) {
     res.status(201).json({ message: "Student already there", find });
   } else {
-    password = bcrypt.hashSync(myPlaintextPassword, 10);
+    password1 = bcrypt.hashSync(password, 10);
     const obje = {
       name,
       email,
@@ -92,6 +93,7 @@ exports.studentAdd = async (req, res) => {
       CGPI,
       Branch,
       Year,
+      password: password1,
       gender,
     };
 
