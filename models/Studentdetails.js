@@ -37,10 +37,12 @@ const StudentSchema = new Schema(
     RoomPreference: [Schema.Types.ObjectId],
     RoomName: {
       type: String,
+      default: " ",
     },
     RoomID: {
       type: Schema.Types.ObjectId,
       ref: "roomsm",
+      default: " ",
     },
     whoBooked: {
       type: String,

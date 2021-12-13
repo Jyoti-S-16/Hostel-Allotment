@@ -96,43 +96,52 @@ router.get(
     ]);
     let Array1 = [];
     AllStudents.forEach(async (e) => {
+      let d = await Students.findOne({ _id: e._id });
+      console.log("THE STUDENT", d);
       if (e.Rooms.length == 0) {
         Array1.push(e._id);
       } else {
         let j = true;
         e.Rooms.forEach(async (f) => {
-          console.log(f, "hi fff");
+          let g = await Room.findOne({ _id: f._id });
+          console.log(g, "Room Prefernces");
           if (j === false) {
-            console.log("hi");
+            j = false;
           } else if (f.isBooked == true) {
             if (i == e.Rooms.length - 1) {
               Array1.push(e._id);
             }
           } else {
-            f.isBooked = true;
-            f.StudentData.push(e._id);
-            e.RoomID = f._id;
-            e.RoomName = f.Name;
-            await f.save();
+            g.isBooked = true;
+            g.StudentData.push(e._id);
+            d.RoomID = g._id;
+            d.RoomName = g.Name;
+            await g.save();
+            
+            console.log("saved");
             j = false;
           }
-        });
-        await e.save();
+        }
+		await d.save(););
       }
     });
     const Rooms = await Room.find({ isBooked: false });
     let i = 0;
     Array1.forEach(async (e) => {
-      const b = await Student.findOne({ _id: e });
-      Rooms[i].isBooked = true;
-      Rooms[i].StudentData = b._id;
-      b.RoomID = Rooms[i]._id;
-      b.RoomName = Rooms[i].Name;
-      await b.save();
-      await Rooms[i].save();
+      let b = await Student.findOne({ _id: e });
+      console.log(b, "random allocation");
+      if (b !== null) {
+        Rooms[i].isBooked = true;
+        Rooms[i].StudentData = b._id;
+        b.RoomID = Rooms[i]._id;
+        b.RoomName = Rooms[i].Name;
+        await b.save();
+        await Rooms[i].save();
+      }
       i++;
     });
     res.status(201).json({
+      message: "Done",
       AllStudents,
       Array1,
     });

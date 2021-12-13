@@ -13,7 +13,8 @@ import StudentDetails from "./pages/StudentDetails";
 import Block from "./pages/Block";
 import RoomAction from "./pages/RoomAction";
 import Staff from "./pages/Staff";
-
+import studentRegsitration from "./auth/StudentRoomRegistration";
+import Hostels from "./auth/Hostels";
 class Routes extends Component {
   render() {
     return (
@@ -27,6 +28,12 @@ class Routes extends Component {
           <PrivateRoute exact path="/room/:id" component={RoomAction} />
           <PrivateRoute exact path="/staff" component={Staff} />
           <Route exact path="/studentLogin" component={StudentLogin} />
+          <Route
+            exact
+            path="/addRoomPriorities"
+            component={studentRegsitration}
+          />
+          <Route exact path="/allocateHostel" component={Hostels} />
           <PrivateRoute
             exact
             path="/studentdetails/:id"

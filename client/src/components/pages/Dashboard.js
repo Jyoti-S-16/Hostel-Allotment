@@ -53,6 +53,17 @@ class Dashboard extends Component {
               </a>
             </div>
           </div>
+		  
+          <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
+            <img src={staff} className="card-img-top" alt="Cleaning" />
+            <div className="card-body">
+              <h5 className="card-title">Hostel Info</h5>
+              <a href="/allocateHostel">
+                Allocate Hostel
+              </a>
+            </div>
+          </div>
+		  
 
         </div>
       </div>
