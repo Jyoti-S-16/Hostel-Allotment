@@ -18,7 +18,7 @@ function studentProfile(props) {
             />
 
             <p style={{ color: "black" }}>
-              {props.details.name} <br />
+              Name:{props.details.name} <br />
               <br />
               CGPI : {props.details.CGPI || "NA"}
             </p>

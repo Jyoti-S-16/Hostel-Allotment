@@ -7,13 +7,13 @@ import gg3 from "../../assets/img/hotels/3.jpg";
 import gg2 from "../../assets/img/hotels/2.jpg";
 import gg1 from "../../assets/img/hotels/1.jpg";
 
-//import gg4 from "../../assets/img/hotels/4.jpg";
-//import gg5 from "../../assets/img/hotels/5.jpg";
-//import gg6 from "../../assets/img/hotels/6.jpg";
+import gg4 from "../../assets/img/hotels/4.jpg";
+import gg5 from "../../assets/img/hotels/5.jpg";
+import gg6 from "../../assets/img/hotels/6.jpeg";
 
-//import gg7 from "../../assets/img/hotels/7.jpg";
-//import gg8 from "../../assets/img/hotels/8.jpg";
-//import gg9 from "../../assets/img/hotels/9.jpg";
+import gg7 from "../../assets/img/hotels/7.jpg";
+import gg8 from "../../assets/img/hotels/8.jpg";
+import gg9 from "../../assets/img/hotels/9.jpg";
 
 class Home extends Component {
   componentDidMount() {
@@ -147,7 +147,7 @@ class Home extends Component {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                     </div>
-                    <p>Manimahesh Girls Hostel</p>
+                    <p>Vidhyanchal Boys Hostel</p>
                   </div>
                 </div>
 
@@ -166,6 +166,60 @@ class Home extends Component {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill-half-full"></i>
                     </div>
+                    <p>Manimahesh Girls Hostel</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                  <div class="hotel">
+                    <div class="hotel-img">
+                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
+                    </div>
+                    <h3>
+                      <a href="#">Hostel 3</a>
+                    </h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>Neelkanth Boys Hostel</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                  <div class="hotel">
+                    <div class="hotel-img">
+                      <img src={gg4} alt="Hotel 3" class="img-fluid" />
+                    </div>
+                    <h3>
+                      <a href="#">Hostel 4</a>
+                    </h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>Aravali Hostel</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                  <div class="hotel">
+                    <div class="hotel-img">
+                      <img src={gg5} alt="Hotel 3" class="img-fluid" />
+                    </div>
+                    <h3>
+                      <a href="#">Hostel 5</a>
+                    </h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>Ambika Girls Hostel</p>
                   </div>
                 </div>
@@ -173,10 +227,10 @@ class Home extends Component {
                 <div class="col-lg-4 col-md-6">
                   <div class="hotel">
                     <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
+                      <img src={gg6} alt="Hotel 3" class="img-fluid" />
                     </div>
                     <h3>
-                      <a href="#">Hostel 3</a>
+                      <a href="#">Hostel 6</a>
                     </h3>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i>
@@ -184,17 +238,17 @@ class Home extends Component {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                     </div>
-                    <p>Himgiri Boys Hostel</p>
+                    <p>Parvati Girls Hostel</p>
                   </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                   <div class="hotel">
                     <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
+                      <img src={gg7} alt="Hotel 3" class="img-fluid" />
                     </div>
                     <h3>
-                      <a href="#">Hostel 3</a>
+                      <a href="#">Hostel 7</a>
                     </h3>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i>
@@ -202,17 +256,17 @@ class Home extends Component {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                     </div>
-                    <p>Himgiri Boys Hostel</p>
+                    <p>Udaygiri Boys Hostel</p>
                   </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                   <div class="hotel">
                     <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
+                      <img src={gg8} alt="Hotel 3" class="img-fluid" />
                     </div>
                     <h3>
-                      <a href="#">Hostel 3</a>
+                      <a href="#">Hostel 8</a>
                     </h3>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i>
@@ -220,17 +274,17 @@ class Home extends Component {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                     </div>
-                    <p>Himgiri Boys Hostel</p>
+                    <p>Himadri Boys Hostel</p>
                   </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                   <div class="hotel">
                     <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
+                      <img src={gg9} alt="Hotel 3" class="img-fluid" />
                     </div>
                     <h3>
-                      <a href="#">Hostel 3</a>
+                      <a href="#">Hostel 9</a>
                     </h3>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i>
@@ -238,278 +292,13 @@ class Home extends Component {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                     </div>
-                    <p>Himgiri Boys Hostel</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                  <div class="hotel">
-                    <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
-                    </div>
-                    <h3>
-                      <a href="#">Hostel 3</a>
-                    </h3>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Himgiri Boys Hostel</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                  <div class="hotel">
-                    <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
-                    </div>
-                    <h3>
-                      <a href="#">Hostel 3</a>
-                    </h3>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Himgiri Boys Hostel</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                  <div class="hotel">
-                    <div class="hotel-img">
-                      <img src={gg3} alt="Hotel 3" class="img-fluid" />
-                    </div>
-                    <h3>
-                      <a href="#">Hostel 3</a>
-                    </h3>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Himgiri Boys Hostel</p>
+                    <p>Dhauladhar Boys Hostel</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section id="gallery">
-            <div class="container" data-aos="fade-up">
-              <div class="section-header">
-                <h2>Gallery</h2>
-                <p>Check our gallery from the recent events</p>
-              </div>
-            </div>
-
-            <div class="gallery-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/1.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/1.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/2.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/2.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/3.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/3.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/4.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/4.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/5.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/5.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/6.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/6.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/7.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/7.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a
-                    href="../../../assets/img/gallery/8.jpg"
-                    class="gallery-lightbox"
-                  >
-                    <img
-                      src="assets/img/gallery/8.jpg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
             </div>
           </section>
         </main>
-        <footer id="footer">
-          <div class="footer-top">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-3 col-md-6 footer-info">
-                  <img src="assets/img/logo.png" alt="TheEvenet" />
-                  <p>
-                    In alias aperiam. Placeat tempore facere. Officiis voluptate
-                    ipsam vel eveniet est dolor et totam porro. Perspiciatis ad
-                    omnis fugit molestiae recusandae possimus. Aut consectetur
-                    id quis. In inventore consequatur ad voluptate cupiditate
-                    debitis accusamus repellat cumque.
-                  </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                  <h4>Useful Links</h4>
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <a href="#">Home</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">About us</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">Services</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">Terms of service</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">Privacy policy</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                  <h4>Useful Links</h4>
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <a href="#">Home</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">About us</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">Services</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">Terms of service</a>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>{" "}
-                      <a href="#">Privacy policy</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-contact">
-                  <h4>Contact Us</h4>
-                  <p>
-                    A108 Adam Street <br />
-                    New York, NY 535022
-                    <br />
-                    United States <br />
-                    <strong>Phone:</strong> +1 5589 55488 55
-                    <br />
-                    <strong>Email:</strong> info@example.com
-                    <br />
-                  </p>
-
-                  <div class="social-links">
-                    <a href="#" class="twitter">
-                      <i class="bi bi-twitter"></i>
-                    </a>
-                    <a href="#" class="facebook">
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="#" class="instagram">
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="#" class="google-plus">
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="#" class="linkedin">
-                      <i class="bi bi-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
 
         {/*<div className="dark-overlay landing-inner text-light">
           <div className="container">

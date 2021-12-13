@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { loginUser } from "../../actions/authActions";
 import StudentProfile from "../auth/studentProfile";
 import "../../login.css";
+import Login from "../../img/Login.jpeg";
 import axios from "axios";
 function StudentLogin() {
   const [email, setEmail] = useState();
@@ -40,10 +41,7 @@ function StudentLogin() {
                   <div class="card-body p-md-5">
                     <div class="row justify-content-center">
                       <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                        {/*<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>*/}
-                        {/*<lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_fw6h59eu.json" class="login_gif" background="transparent"  speed="1"  loop  autoplay></lottie-player> -->*/}
-                        {/*<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>*/}
-                        {/*<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_yjlOdw.json" class="login_gif" background="transparent"  speed="1"  loop autoplay></lottie-player>*/}
+                        <img src={Login} />
                       </div>
 
                       <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
@@ -129,8 +127,7 @@ function StudentLogin() {
   } else {
     return (
       <div>
-        <StudentProfile details={details}
-		 />
+        <StudentProfile details={details} />
       </div>
     );
   }
