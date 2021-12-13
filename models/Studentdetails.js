@@ -42,7 +42,6 @@ const StudentSchema = new Schema(
     RoomID: {
       type: Schema.Types.ObjectId,
       ref: "roomsm",
-      default: " ",
     },
     whoBooked: {
       type: String,
