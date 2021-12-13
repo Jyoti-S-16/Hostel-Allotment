@@ -29,12 +29,12 @@ function studentProfile(props) {
             </p>
             <p style={{ color: "black" }}>
               <br />
-              Branch : {props.details.branch || "NA"}
+              Branch : {props.details.Branch || "NA"}
             </p>
 
             <p style={{ color: "black" }}>
               <br />
-              Room Alloted : {props.details.roomNo || "NA"}
+              Room Alloted : {props.details.RoomName || "NA"}
             </p>
           </div>
           <div className="buttons">

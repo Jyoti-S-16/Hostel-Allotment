@@ -85,26 +85,19 @@ router.get(
       {
         $sort: { CGPI: -1 },
       },
-      {
-        $lookup: {
-          from: "roomsms",
-          localField: "RoomPreference",
-          foreignField: "_id",
-          as: "Rooms",
-        },
-      },
     ]);
     let Array1 = [];
     AllStudents.forEach(async (e) => {
       let d = await Students.findOne({ _id: e._id });
-      console.log("THE STUDENT", d);
-      if (e.Rooms.length == 0) {
-        Array1.push(e._id);
+
+      if (d.RoomPreference.length == 0) {
+        console.log("Name", d.name, d._id);
+        Array1.push(d._id);
+        console.log("Array1", Array1);
       } else {
         let j = true;
-        e.Rooms.forEach(async (f) => {
+        d.RoomPreference.forEach(async (f) => {
           let g = await Room.findOne({ _id: f._id });
-          console.log(g, "Room Prefernces");
           if (j === false) {
             j = false;
           } else if (f.isBooked == true) {
@@ -113,12 +106,10 @@ router.get(
             }
           } else {
             g.isBooked = true;
-            g.StudentData.push(e._id);
+            g.StudentData.push(d._id);
             d.RoomID = g._id;
             d.RoomName = g.Name;
             await g.save();
-
-            console.log("saved");
             j = false;
           }
         });
@@ -126,25 +117,32 @@ router.get(
       }
     });
     const Rooms = await Room.find({ isBooked: false });
+    console.log(Array1, "hieee", Rooms);
     let i = 0;
-    Array1.forEach(async (e) => {
-      let b = await Student.findOne({ _id: e });
-      console.log(b, "random allocation");
-      if (b !== null) {
-        Rooms[i].isBooked = true;
-        Rooms[i].StudentData = b._id;
-        b.RoomID = Rooms[i]._id;
-        b.RoomName = Rooms[i].Name;
-        await b.save();
-        await Rooms[i].save();
-      }
-      i++;
-    });
-    res.status(201).json({
-      message: "Done",
-      AllStudents,
-      Array1,
-    });
+    if (Array1.length > 0) {
+      Array1.forEach(async (e) => {
+        console.log("hi hello how are you", e);
+        let b = await Students.findOne({ _id: e });
+        if (b !== null) {
+          Rooms[i].isBooked = true;
+          Rooms[i].StudentData = b._id;
+          b.RoomID = Rooms[i]._id;
+          b.RoomName = Rooms[i].Name;
+          await b.save();
+          await Rooms[i].save();
+        }
+        i++;
+      });
+      await res.status(201).json({
+        message: "Done",
+      });
+    } else {
+      res.status(201).json({
+        message: "Done",
+        AllStudents,
+        Array1,
+      });
+    }
   }
 );
 

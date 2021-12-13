@@ -81,7 +81,7 @@ function StudentRoomRegistration(props) {
                               <select
                                 style={{
                                   appearance: "none",
-                                  backgroundColor: "Green",
+                                  backgroundColor: "powderblue",
                                   borderStyle: "solid",
                                   padding: "0 1em 0 0",
                                   margin: 0,
@@ -131,7 +131,7 @@ function StudentRoomRegistration(props) {
                                 style={{
                                   appearance: "none",
                                   // Additional resets for further consistency
-                                  backgroundColor: "green",
+                                  backgroundColor: "powderblue",
                                   borderStyle: "solid",
                                   padding: "0 1em 0 0",
                                   margin: 0,

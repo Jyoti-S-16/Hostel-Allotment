@@ -2,6 +2,7 @@ const Student = require("../models/Studentdetails");
 const Room = require("../models/Roomsm");
 const { ObjectId } = require("mongoose");
 const bcrypt = require("bcryptjs");
+
 exports.Studentlogin = async (req, res) => {
   const { email, password } = req.body;
   const Find = await Student.findOne({ email });
