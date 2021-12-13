@@ -117,12 +117,12 @@ router.get(
             d.RoomID = g._id;
             d.RoomName = g.Name;
             await g.save();
-            
+
             console.log("saved");
             j = false;
           }
-        }
-		await d.save(););
+        });
+        await d.save();
       }
     });
     const Rooms = await Room.find({ isBooked: false });
